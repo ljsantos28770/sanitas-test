@@ -17,7 +17,7 @@ public class CalculatorControllerV1 {
 	@Autowired
 	CalculatorService calculatorService;
 
-    @PostMapping("/")
+    @PostMapping("/calculate")
     public Result calculate(@RequestBody final Operation operation) {
     	return calculatorService.operate(operation);
     }
