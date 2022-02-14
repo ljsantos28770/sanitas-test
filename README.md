@@ -67,4 +67,7 @@ Ejecución
 * el servicio debería ejecutar con : java -jar calculator-0.0.1-SNAPSHOT.jar 
  
 * al arrancar en el navegador : http://localhost:8080/swagger-ui/index.html
+
+
+ ![alt text](swagger.png "swagger")
  
