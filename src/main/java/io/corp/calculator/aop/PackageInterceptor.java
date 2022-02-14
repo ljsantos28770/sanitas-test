@@ -19,14 +19,14 @@ public class PackageInterceptor  {
 	@Around(value = "execution(* io.corp.calculator.controller.*.*(..))")
 	public Object processDelegate(ProceedingJoinPoint joinPoint) throws java.lang.Throwable {
 
-
 		Object proceed = null;
 
 		try {
 			proceed = joinPoint.proceed();
 
-		} finally {
-			tracerAPI.trace("finally");
+		} finally {	
+			String name = joinPoint.getSignature().getName();
+			tracerAPI.trace(name+ " method executed");
 		}
 
 		tracerAPI.trace(proceed);

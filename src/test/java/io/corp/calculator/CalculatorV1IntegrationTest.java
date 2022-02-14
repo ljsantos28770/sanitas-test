@@ -18,7 +18,7 @@ import io.corp.calculator.model.Result;
 
 @SpringBootTest(classes = CalculatorApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @DisplayName("Tests de integración del controlador CalculatorControllerV1")
-class CalculatorControllerV1Test {
+class CalculatorV1IntegrationTest {
 
 	private static String URL = "/api/v1/calculator/calculate";
 
