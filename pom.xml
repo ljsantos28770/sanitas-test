@@ -37,13 +37,6 @@
 			<version>${exp4j.version}</version>
 		</dependency>
 
-		<dependency>
-			<groupId>io.corp.</groupId>
-			<artifactId>tracer</artifactId>
-			<version>1.0.0</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/src/main/resources/lib/tracer-1.0.0.jar</systemPath>
-		</dependency>
 
 		<dependency>
 			<groupId>org.springdoc</groupId>

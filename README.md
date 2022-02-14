@@ -18,3 +18,44 @@ Notas adicionales
   * debe ser un microservicio spring-boot (cualquier versión de spring-boot)
 
 * El entregable debe compilar en una instalación de maven totalmente limpia, debe indicarse en un fichero README tanto los pasos necesarios para generar el jar final como para ejecutarlo (no hace falta mucho detalle).
+
+
+Consideraciones
+=================
+* Para la ejecución de operaciones con la calculadora se ha tenido en cuenta la librería EXP4J que es capaz de ejecutar operaciones aritméticas entre otras y se podrá tener en cuenta para futuras operaciones.
+
+* El paquete tracer contenía un error, puesto que TracerImpl no implementaba el interfaz TracerAPI.
+ * se ha incluido en el paquete io.corp.calculator.trace y se ha incluido esa consideración
+
+* Se ha incluido un sistema rústico de versionado basado en UI con dos Controller, simulando que la implementación V2 tenga la opción de enviar una expresión en String para que sea evaluada por el motor EXP4J.
+
+* Para la V1 se ha incluido una validación que únicamente permite operaciones de suma y resta, incluyendo esa característica con un Validador al uso en el Controller.
+
+* Para la V2 no se ha tenido en cuenta validación, puesto que se delega en la librería. Podría mejorarse explorando las capacidades de EXP4J.
+
+* Para la trazabilidad básica se ha incluido un interceptor AOP donde se realiza la llamada al trazador.
+
+* Para los tests se ha incluido una suerte de Tests de Mocks de Servicio, Integración y MVC para ejemplo. Únicamente para V1.
+
+* el JAR de Tracer debería haber sido incluido como 
+
+         <dependency>
+			<groupId>io.corp.</groupId>
+			<artifactId>tracer</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/resources/lib/tracer-1.0.0.jar</systemPath>
+		</dependency>
+
+Pero se ha descartado por no contar con la implementación de TracerAPI con TracerImpl
+
+Compilación
+=================
+* el servicio debería compilar con maven : mvn clean package
+
+Ejecución
+=================
+* el servicio debería ejecutar con : java -jar calculator-0.0.1-SNAPSHOT.jar 
+ 
+* al arrancar en el navegador : http://localhost:8080/swagger-ui/index.html
+ 
