@@ -22,7 +22,14 @@ Notas adicionales
 
 Consideraciones
 =================
+* El UML inicial resultaría como sigue, con una representación de los principales componentes clásicos en una estructura de servicios REST con Spring Boot.
+
+
+![alt text](uml.png "UML")
+
 * Para la ejecución de operaciones con la calculadora se ha tenido en cuenta la librería EXP4J que es capaz de ejecutar operaciones aritméticas entre otras y se podrá tener en cuenta para futuras operaciones.
+
+* Se ha incluido un Global Exception Handler como ejemplo de captura global de excepciones.
 
 * El paquete tracer contenía un error, puesto que TracerImpl no implementaba el interfaz TracerAPI.
  * se ha incluido en el paquete io.corp.calculator.trace y se ha incluido esa consideración
