@@ -60,11 +60,13 @@ Pero se ha descartado por no contar con la implementación de TracerAPI con Trac
 
 Compilación
 =================
-* el servicio debería compilar con maven : mvn clean package
+* el servicio debería compilar y empaquetar con maven : mvn clean package
+* el servicio debería realizar los test pertinentes : mvn clean test
+
 
 Ejecución
 =================
-* el servicio debería ejecutar con : java -jar calculator-0.0.1-SNAPSHOT.jar 
+* el servicio debería ejecutar con JVM 8 donde el empaquetado una vez realizado : java -jar calculator-0.0.1-SNAPSHOT.jar 
  
 * al arrancar en el navegador : http://localhost:8080/swagger-ui/index.html
 
