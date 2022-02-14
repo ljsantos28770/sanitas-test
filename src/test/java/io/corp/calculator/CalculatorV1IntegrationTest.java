@@ -17,7 +17,6 @@ import io.corp.calculator.model.Operation;
 import io.corp.calculator.model.Result;
 
 @SpringBootTest(classes = CalculatorApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@DisplayName("Tests de integración del controlador CalculatorControllerV1")
 class CalculatorV1IntegrationTest {
 
 	private static String URL = "/api/v1/calculator/calculate";
@@ -33,7 +32,6 @@ class CalculatorV1IntegrationTest {
 	
 
 	@Test
-	@DisplayName("Comprobación de llamada correcta al endpoint CON RESULTADO CalculatorControllerV1 [HTTP 200]")
 	final void given_CalculatorControllerV1Input_then_return_ok() throws Exception {
 
         String expected = mapper.writeValueAsString(createResult());
