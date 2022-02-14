@@ -56,6 +56,8 @@ Consideraciones
 
 Pero se ha descartado por no contar con la implementación de TracerAPI con TracerImpl
 
+* No se han tenido en cuenta temas de Seguridad, integración en entornos con API Gateway y otros temas de arquitectura de microservicios como Circuit Breaker o demás. No se pedían en enunciado.
+
 Compilación
 =================
 * el servicio debería compilar con maven : mvn clean package
